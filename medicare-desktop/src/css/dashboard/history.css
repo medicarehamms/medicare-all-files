@@ -1,0 +1,71 @@
+
+.dashboardMain#history {
+	padding: 4rem !important;
+
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+}
+
+.dashboardMain > #historyPanel {
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+	border-radius: 1rem;
+
+	padding: 4rem;
+
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+	gap: 4rem;
+
+	background-color: var(--color-font-light);
+
+	z-index: 1;
+	overflow-y: auto;
+}
+.dashboardMain > #historyPanel > aside {
+	display: flex;
+	flex-direction: row;
+	justify-content: stretch;
+	align-items: center;
+	gap: 2rem;
+}
+.dashboardMain > #historyPanel > aside > * {
+	flex: 1;
+}
+.dashboardMain > #historyPanel > table {
+	width: 100%;
+
+	border-collapse: collapse;
+	border-radius: 1rem;
+	border: solid 0.25rem var(--color-font-dark);
+
+	background-color: var(--color-font-light);
+
+	white-space: nowrap;
+
+	overflow: hidden;
+}
+.dashboardMain > #historyPanel > table > thead > tr:nth-child(1) {
+	background-color: var(--color-font-dark);
+	color: var(--color-font-light);
+}
+.dashboardMain > #historyPanel > table > * > tr > * {
+	text-align: center;
+}
+.dashboardMain > #historyPanel > table > * > tr > *:last-child > .button {
+	width: 100%;
+}
+.dashboardMain > #historyPanel > table > * > tr > * {
+	padding: 2rem;
+	border: solid 0.25rem var(--color-font-dark);
+}
+.dashboardMain > #historyPanel > table > * > tr > *:last-child > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+}

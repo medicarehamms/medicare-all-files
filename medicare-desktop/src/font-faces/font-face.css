@@ -1,0 +1,42 @@
+/* -------------------- Times New Roman -------------------- */
+/* Bold */
+@font-face {
+	font-family: 'Times New Roman';
+	font-style: normal;
+	font-weight: 900;
+	src: local('Times New Roman Bold'), local('Times New Roman-Bold'),
+		url('./times new roman bold.ttf') format('truetype');
+}
+/* Italic */
+@font-face {
+	font-family: 'Times New Roman';
+	font-style: italic;
+	font-weight: 400;
+	src: local('Times New Roman Italic'), local('Times New Roman-Italic'),
+		url('./times new roman italic.ttf') format('truetype');
+}
+/* Bold Italic */
+@font-face {
+	font-family: 'Times New Roman';
+	font-style: italic;
+	font-weight: 900;
+	src: local('Times New Roman Bold Italic'),
+		local('Times New Roman-BoldItalic'),
+		url('./times new roman bold italic.ttf') format('truetype');
+}
+/* Regular */
+@font-face {
+	font-family: 'Times New Roman';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Times New Roman'), local('Times New Roman'),
+		url('./times new roman.ttf') format('truetype');
+}
+/* Italic */
+@font-face {
+	font-family: 'Times New Roman';
+	font-style: italic;
+	font-weight: 400;
+	src: local('Times New Roman Italic'), local('Times New Roman-Italic'),
+		url('./times new roman italic.ttf') format('truetype');
+}

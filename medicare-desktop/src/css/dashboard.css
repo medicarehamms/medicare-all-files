@@ -1,0 +1,142 @@
+
+.dashboardMain {
+	position: relative;
+	height: calc(100vh - 12rem);
+	top: 12rem;
+
+	background: url('https://firebasestorage.googleapis.com/v0/b/medicare-a38ad.appspot.com/o/assets%2FBackground image.jpeg?alt=media');
+	background-size: cover;
+	background-position: center;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 4rem;
+
+	padding: 0 4rem;
+
+	z-index: 2;
+}
+.dashboardMain::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to left, var(--color-secondary), transparent, transparent, var(--color-secondary));
+
+	z-index: -1;
+}
+.dashboardMain::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top, var(--color-primary), transparent, transparent, var(--color-primary));
+	opacity: 0.5;
+
+	z-index: -2;
+}
+.dashboardMain > div {
+	height: 100%;
+	width: calc(50% - 2rem);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.dashboardMain > #head {
+	width: 100%;
+	height: 12rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+}
+.dashboardMain > #head > div {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 2rem;
+}
+.dashboardMain > #head > .input {
+	width: 100%;
+}
+.dashboardMain > div > #titleCard {
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 1rem;
+	padding: 4rem 12rem;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 2rem;
+
+	color: var(--color-font-light);
+}
+.dashboardMain > div > #menuCard {
+	width: 100%;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+.dashboardMain > div > #menuCard > .button {
+	width: 20rem;
+	height: 10rem;
+
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 1rem;
+	padding: 2rem;
+
+	color: var(--color-font-light);
+}
+.dashboardMain > div > span {
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+}
+.dashboardMain > div > span:nth-child(1) {
+	justify-content: flex-start;
+}
+.dashboardMain > div > span:nth-child(1) > img {
+	height: 28rem;
+}
+.dashboardMain > div > span:nth-child(2) {
+	justify-content: flex-end;
+}
+.dashboardMain > div > span:nth-child(2) > img {
+	height: 24rem;
+}
+.dashboardMain > div > span:nth-child(3) {
+	justify-content: center;
+}
+.dashboardMain > div > span:nth-child(3) > img {
+	height: 20rem;
+}
+.dashboardMain > div > span > img {
+	border-radius: 4rem;
+	border: 0.25rem solid var(--color-secondary);
+}
+@media (max-width: 60rem) {
+	.dashboardMain {
+		flex-direction: column;
+	}
+	.dashboardMain#mainDashboard > div:nth-child(2) {
+		display: none;
+	}
+	.dashboardMain#mainDashboard > div {
+		width: 100%;
+	}
+}

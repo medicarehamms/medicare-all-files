@@ -1,0 +1,243 @@
+:root {
+	--color-primary: #1BA4AC;
+	--color-secondary: #5CAEEA;
+
+	--color-font-light: #FFFFFF;
+	--color-font-dark: #000000;
+
+	--color-plain: #F1F1F1;
+
+	--transition-speed: 0.25s;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+    image-rendering: crisp-edges;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+
+	font-size: 2rem;
+	line-height: 1;
+	font-family: "Times New Roman";
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+
+/* Headings */
+h1,
+h3,
+h3,
+h4,
+h5,
+h6 {
+	width: 100%;
+	text-align: unset;
+}
+h1 {
+	font-size: 5rem;
+}
+h2 {
+	font-size: 4.5rem;
+}
+h3 {
+	font-size: 4rem;
+}
+h3 {
+	font-size: 3.5rem;
+}
+h4 {
+	font-size: 3rem;
+}
+h5 {
+	font-size: 2.5rem;
+}
+h6 {
+	font-size: 2rem;
+}
+p {
+	font-size: 2rem;
+}
+span, b, i {
+	font-size: inherit;
+}
+
+::-webkit-scrollbar {
+	width: 1rem;
+}
+::-webkit-scrollbar-thumb {
+	background-color: var(--color-primary);
+	border-radius: 1rem;
+}
+::-webkit-scrollbar-track {
+	background-color: var(--color-plain);
+	border-radius: 1rem;
+}
+
+
+#header {
+	position: fixed;
+	width: 100%;
+	height: 6rem;
+	padding: 0 4rem;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--color-plain);
+	z-index: 30;
+}
+#header > div {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+#header > div > img {
+	width: 6rem;
+	height: 6rem;
+}
+#header > input {
+	display: none;
+}
+#header > label {
+	position: relative;
+	width: 6rem;
+	height: 6rem;
+	padding: 1rem;
+	display: none;
+	--color: var(--color-font-dark);
+}
+#header > label:hover {
+	--color: var(--color-primary);
+}
+#header > label::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-font-dark);
+	opacity: 0;
+	transition: opacity var(--transition-speed);
+	z-index: -1;
+}
+#header > label:hover::before {
+	opacity: 0.05;
+}
+#header > label > svg {
+	transition: var(--transition-speed);
+}
+#header > nav {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 2rem;
+}
+#header > nav > a {
+	position: relative;
+	padding: 0.5rem 1rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	transition: color var(--transition-speed);
+	--color: var(--color-font-dark);
+}
+#header > nav > a:hover {
+	color: var(--color-primary);
+	--color: var(--color-primary);
+}
+#header > nav > a::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-font-dark);
+	opacity: 0;
+	transition: opacity var(--transition-speed);
+	z-index: -1;
+}
+#header > nav > a:hover::before {
+	opacity: 0.05;
+}
+#header > nav > a > *:first-child {
+	width: 2rem;
+	height: 2rem;
+	display: inline-block;
+}
+#header > nav > a svg {
+	transition: var(--transition-speed);
+}
+@media (max-width: 60rem) {
+	#header {
+		height: 8rem;
+		padding: 0 2rem;
+		z-index: 29;
+	}
+	#header::before {
+		content: "";
+		position: fixed;
+		width: calc(100% - 4rem);
+		height: 0.1rem;
+		top: 8rem;
+		left: 2rem;
+		background-color: var(--color-primary);
+		z-index: 30;
+	}
+	#header::after {
+		content: "";
+		position: fixed;
+		width: 100%;
+		height: 8rem;
+		top: 0;
+		left: 0;
+		background-color: var(--color-plain);
+		z-index: 26;
+	}
+	#header > div {
+		gap: 1rem;
+	}
+	#header > label {
+		display: block;
+	}
+	#header > nav {
+		position: fixed;
+		width: 100%;
+		top: -100%;
+		right: 0;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 0;
+		background-color: var(--color-plain);
+		transition: top var(--transition-speed);
+		z-index: 25;
+	}
+	#header > #checkbox:checked ~ nav {
+		top: 8rem;
+	}
+	#header > nav > a {
+		width: 100%;
+		padding: 2rem 4rem;
+	}
+	#header > *:not(nav) {
+		z-index: 28;
+	}
+}

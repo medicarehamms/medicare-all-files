@@ -1,0 +1,88 @@
+
+#signInMain {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+#signInMain > * {
+	width: 50%;
+	height: 100%;
+	object-fit: cover;
+}
+#signInMain > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 4rem;
+
+	background: linear-gradient(var(--color-secondary), var(--color-font-light));
+}
+#signInMain > div > img {
+	height: 20rem;
+}
+#signInMain > div > form {
+	position: relative;
+	max-width: calc(100% - 16rem);
+
+	padding: 12rem;
+
+	border-radius: 4rem;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+
+	text-align: center;
+
+	z-index: 1;
+	overflow: hidden;
+}
+#signInMain > div > form::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-font-dark);
+	opacity: 0.25;
+	z-index: -1;
+}
+#signInMain > div > form > input {
+	width: 100%;
+}
+#signInMain > div > form > div {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+}
+#signInMain > div > form > div > input {
+	width: 100%;
+}
+
+@media (max-width: 70rem) {
+	#signInMain > div > form {
+		padding: 8rem;
+	}
+}
+@media (max-width: 60rem) {
+	#signInMain > div {
+		width: 100%;
+	}
+	#signInMain > img {
+		display: none;
+	}
+}
+@media (max-width: 40rem) {
+	#signInMain > div > form {
+		padding: 4rem;
+	}
+}

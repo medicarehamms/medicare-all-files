@@ -1,0 +1,109 @@
+
+.dashboardMain#appointments {
+	padding: 4rem !important;
+
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+}
+
+.dashboardMain > #appointmentsPanel {
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+	border-radius: 1rem;
+
+	padding: 4rem;
+
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 4rem;
+
+	background-color: var(--color-font-light);
+
+	z-index: 1;
+	overflow-y: auto;
+}
+.dashboardMain > #appointmentsPanel > table {
+	width: 100%;
+
+	border-collapse: collapse;
+	border-radius: 1rem;
+	border: solid 0.25rem var(--color-font-dark);
+
+	background-color: var(--color-font-light);
+
+	white-space: nowrap;
+
+	overflow: hidden;
+}
+.dashboardMain > #appointmentsPanel > table > * > tr {
+	position: relative;
+}
+.dashboardMain > #appointmentsPanel > table > * > tr[status="approved"],
+.dashboardMain > #appointmentsPanel > table > * > tr[status="rejected"] {
+	opacity: 0.75;
+}
+.dashboardMain > #appointmentsPanel > table > * > tr[status="approved"]::after,
+.dashboardMain > #appointmentsPanel > table > * > tr[status="rejected"]::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	background-color: var(--color-font-dark);
+	opacity: 0.25;
+	z-index: -1;
+}
+.dashboardMain > #appointmentsPanel > table > * > tr > *:nth-child(3) {
+	width: 50%;
+}
+.dashboardMain > #appointmentsPanel > table > * > tr > *#requester {
+	width: 50%;
+	text-align: center;
+}
+.dashboardMain > #appointmentsPanel > table > * > tr > * {
+	padding: 2rem;
+	border: solid 0.25rem var(--color-font-dark);
+}
+.dashboardMain > #appointmentsPanel > table > thead > tr:nth-child(1) {
+	background-color: var(--color-primary);
+	color: var(--color-font-light);
+}
+.dashboardMain > #appointmentsPanel > table > tbody > tr > *.clickable {
+	position: relative;
+	cursor: pointer;
+	z-index: 1;
+}
+.dashboardMain > #appointmentsPanel > table > tbody > tr > *.clickable:hover::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: var(--color-primary);
+	opacity: 0.5;
+	z-index: -1;
+}
+.dashboardMain > #appointmentsPanel > table > tbody > tr > *.rejected {
+	text-align: left;
+	white-space: pre-wrap;
+}
+.dashboardMain > #appointmentsPanel > table > tbody > tr > *.rejected > span {
+	display: inline-block;
+	max-height: 10rem;
+	margin-right: 1rem;
+	overflow-y: auto;
+}
+.dashboardMain > #appointmentsPanel > table > * > tr > *:last-child {
+	text-align: center;
+}
+.dashboardMain > #appointmentsPanel > table > * > tr > *:last-child > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+}

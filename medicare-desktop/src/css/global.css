@@ -1,0 +1,169 @@
+:root {
+	--color-primary: #1BA4AC;
+	--color-secondary: #5CAEEA;
+
+	--color-font-light: #FFFFFF;
+	--color-font-dark: #000000;
+
+	--transition-speed: 0.25s;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+    image-rendering: crisp-edges;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+
+	font-size: 2rem;
+	line-height: 1;
+	font-family: "Times New Roman";
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+
+/* Headings */
+h1,
+h3,
+h3,
+h4,
+h5,
+h6 {
+	width: 100%;
+	text-align: unset;
+}
+h1 {
+	font-size: 5rem;
+}
+h2 {
+	font-size: 4.5rem;
+}
+h3 {
+	font-size: 4rem;
+}
+h3 {
+	font-size: 3.5rem;
+}
+h4 {
+	font-size: 3rem;
+}
+h5 {
+	font-size: 2.5rem;
+}
+h6 {
+	font-size: 2rem;
+}
+p {
+	font-size: 2rem;
+}
+html {
+	font-size: calc(62.5% / 1.25);
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 12rem;
+	z-index: 1000;
+	background: radial-gradient(farthest-side at 50% 0, var(--color-secondary), var(--color-font-light));
+	box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);
+
+	padding: 0 2rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+}
+#header > img {
+	height: 100%;
+	text-align: center;
+	object-fit: contain;
+	object-position: left;
+}
+#header > h3 {
+	width: 100%;
+	text-align: left;
+}
+#header > nav {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 2rem;
+}
+
+.button {
+	display: inline-block;
+	padding: 1rem 4rem;
+	border-radius: 1rem;
+	border: solid 0.25rem var(--color-font-dark);
+	font-weight: bold;
+	background-color: var(--color-font-light);
+	box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+}
+.button:hover {
+	border-color: var(--color-primary);
+	color: var(--color-primary);
+}
+.button.contrast {
+	border: solid 0.25rem var(--color-font-light);
+	background-color: var(--color-font-dark);
+	color: var(--color-font-light);
+}
+.button.contrast:hover {
+	background-color: var(--color-primary);
+	color: var(--color-font-light);
+}
+.button.tiny {
+	padding: 0.5rem 2rem;
+}
+
+.input {
+	display: inline-block;
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+	border: solid 0.25rem var(--color-font-dark);
+	background-color: var(--color-font-light);
+	box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+div:has( > .input.labeled) {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+div:has( > .input.labeled) > input,
+div:has( > .input.labeled) > select,
+div:has( > .input.labeled) > textarea {
+	resize: vertical;
+	width: 100%;
+}
+
+#dimmer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+}

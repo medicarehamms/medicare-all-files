@@ -1,0 +1,78 @@
+
+#homeMain {
+	position: relative;
+	height: calc(100vh - 12rem);
+	top: 12rem;
+
+	background: url('https://firebasestorage.googleapis.com/v0/b/medicare-a38ad.appspot.com/o/assets%2FBackground image.jpeg?alt=media');
+	background-size: cover;
+	background-position: center;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 4rem;
+
+	padding: 0 4rem;
+}
+#homeMain > div {
+	height: 100%;
+	width: calc(50% - 2rem);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#homeMain > div > #titleCard {
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 1rem;
+	padding: 4rem 12rem;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 2rem;
+
+	color: var(--color-font-light);
+}
+#homeMain > div > span {
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+}
+#homeMain > div > span:nth-child(1) {
+	justify-content: flex-start;
+}
+#homeMain > div > span:nth-child(1) > img {
+	height: 28rem;
+}
+#homeMain > div > span:nth-child(2) {
+	justify-content: flex-end;
+}
+#homeMain > div > span:nth-child(2) > img {
+	height: 24rem;
+}
+#homeMain > div > span:nth-child(3) {
+	justify-content: center;
+}
+#homeMain > div > span:nth-child(3) > img {
+	height: 20rem;
+}
+#homeMain > div > span > img {
+	border-radius: 4rem;
+	border: 0.25rem solid var(--color-secondary);
+}
+@media (max-width: 60rem) {
+	#homeMain {
+		flex-direction: column;
+	}
+	#homeMain > div:nth-child(2) {
+		display: none;
+	}
+	#homeMain > div {
+		width: 100%;
+	}
+}

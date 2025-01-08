@@ -1,0 +1,56 @@
+{
+	"expo": {
+		"name": "Medicare",
+		"slug": "medicare-mobile",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/icon.png",
+		"userInterfaceStyle": "light",
+		"newArchEnabled": true,
+		"splash": {
+			"image": "./assets/splash.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#ffffff"
+		},
+		"ios": {
+			"supportsTablet": true
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/adaptive-icon.png",
+				"backgroundColor": "#ffffff",
+				"backgroundImage": "./assets/background.png"
+			},
+			"package": "com.hamms.medicaremobile"
+		},
+		"web": {
+			"favicon": "./assets/favicon.png"
+		},
+		"plugins": [
+			[
+				"expo-font",
+				{
+					"fonts": [
+						"./src/fonts/Times New Roman.ttf",
+						"./src/fonts/Times New Roman bold.ttf",
+						"./src/fonts/Times New Roman italic.ttf",
+						"./src/fonts/Times New Roman bold italic.ttf"
+					]
+				}
+			],
+			[
+				"expo-screen-orientation",
+				{
+					"defaultOrientation": "PORTRAIT",
+					"initialOrientation": "PORTRAIT"
+				}
+			],
+			"expo-sqlite"
+		],
+		"extra": {
+			"eas": {
+				"projectId": "04932cdc-5098-4fdf-bce2-36b823280a3d"
+			}
+		}
+	}
+}

@@ -1,0 +1,286 @@
+
+.dashboardMain#supply {
+	padding: 4rem;
+
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+}
+.dashboardMain#supply > #categoryCards {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	padding: 4rem;
+
+	background-color: var(--color-font-light);
+	border-radius: 1rem;
+
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 4rem;
+
+	z-index: 1;
+}
+.dashboardMain#supply > #head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+}
+.dashboardMain#supply > #categoryCards > #addButton {
+	position: relative;
+	height: 12rem;
+	width: 12rem;
+
+	border-radius: 1rem;
+	border: solid 0.25rem var(--color-font-dark);
+
+	cursor: pointer;
+}
+.dashboardMain#supply > #categoryCards > #addButton:hover {
+	border-color: var(--color-primary);
+}
+.dashboardMain#supply > #categoryCards > #addButton::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	height: 4rem;
+	width: 1rem;
+
+	background-color: var(--color-font-dark);
+}
+.dashboardMain#supply > #categoryCards > #addButton::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	height: 1rem;
+	width: 4rem;
+
+	background-color: var(--color-font-dark);
+}
+.dashboardMain#supply > #categoryCards > #addButton:hover:before,
+.dashboardMain#supply > #categoryCards > #addButton:hover:after {
+	background-color: var(--color-primary);
+}
+
+.dashboardMain .categoryCard {
+	position: relative;
+	width: fit-content;
+	height: 24rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 2rem;
+	z-index: 1;
+}
+.dashboardMain .categoryCard:hover::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+
+	border-radius: 1rem;
+	background-color: var(--color-primary);
+
+	opacity: 0.25;
+	z-index: -1;
+}
+.dashboardMain .categoryCard > img {
+	height: 16rem;
+	width: 20rem;
+	object-fit: cover;
+
+	border-radius: 1rem;
+	border: solid 0.25rem var(--color-font-dark);
+}
+.dashboardMain .categoryCard > h2 {
+	width: fit-content;
+	min-width: 20rem;
+
+	border-radius: 1rem;
+	padding: 1rem 2rem;
+	background-color: var(--color-primary);
+	text-align: center;
+}
+
+
+
+.dashboardMain > #itemsPanel {
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+	border-radius: 1rem;
+
+	padding: 4rem;
+
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 4rem;
+
+	background-color: var(--color-font-light);
+
+	z-index: 1;
+	overflow: auto;
+}
+.dashboardMain > #itemsPanel > #categoryPanel {
+	position: relative;
+	width: 100%;
+	height: 32rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	gap: 4rem;
+}
+.dashboardMain > #itemsPanel > #categoryPanel > img {
+	width: 32rem;
+	height: 32rem;
+	display: block;
+	object-fit: cover;
+	cursor: pointer;
+	border-radius: 1rem;
+}
+.dashboardMain > #itemsPanel > #categoryPanel:has(> img:hover)::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 32rem;
+	height: 32rem;
+
+	background-color: var(--color-primary);
+	opacity: 0.25;
+
+	z-index: 5;
+	pointer-events: none;
+}
+.dashboardMain > #itemsPanel > #categoryPanel > input[type="file"] {
+	display: none;
+}
+.dashboardMain > #itemsPanel > #categoryPanel > div {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 2rem;
+}
+.dashboardMain > #itemsPanel > #categoryPanel > div > h2 {
+	position: relative;
+	width: 100%;
+	text-align: left;
+}
+.dashboardMain > #itemsPanel > #categoryPanel > div > h2:hover::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	background-color: var(--color-primary);
+	opacity: 0.25;
+
+	z-index: 5;
+	pointer-events: none;
+}
+.dashboardMain > #itemsPanel > #categoryPanel > div > #deleteCategoryButton {
+	width: 100%;
+}
+
+.dashboardMain > #itemsPanel > table {
+	width: 100%;
+
+	border-collapse: collapse;
+	border-radius: 1rem;
+	border: solid 0.25rem var(--color-font-dark);
+
+	background-color: var(--color-font-light);
+
+	white-space: nowrap;
+
+	overflow: hidden;
+}
+.dashboardMain > #itemsPanel > table > thead > tr:nth-child(1) {
+	background-color: var(--color-primary);
+	color: var(--color-font-light);
+}
+.dashboardMain > #itemsPanel > table > * > tr > *:first-child {
+	width: 100%;
+}
+.dashboardMain > #itemsPanel > table > * > tr > *:not(:first-child) {
+	min-width: 10rem;
+}
+.dashboardMain > #itemsPanel > table > * > tr > * > input {
+	width: 100%;
+	height: 100%;
+
+	border: none;
+	background-color: transparent;
+}
+.dashboardMain > #itemsPanel > table > * > tr > *:nth-child(3) {
+	width: 100%;
+	text-align: center;
+}
+.dashboardMain > #itemsPanel > table > * > tr > *:nth-child(3) > img {
+	width: 20rem;
+	height: 5rem;
+	object-fit: cover;
+}
+.dashboardMain > #itemsPanel > table > * > tr > *:nth-child(3) > input {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+
+	border: none;
+	background-color: transparent;
+}
+.dashboardMain > #itemsPanel > table > * > tr > *:nth-child(4) > input {
+	width: 100%;
+	text-align: center;
+}
+.dashboardMain > #itemsPanel > table > * > tr > * {
+	padding: 2rem;
+	border: solid 0.25rem var(--color-font-dark);
+	text-align: center;
+}
+.dashboardMain > #itemsPanel > table > * > tr > *:last-child > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+}
+.dashboardMain > #itemsPanel > table > tbody > tr:not(:last-child) > td {
+	position: relative;
+	z-index: 1;
+}
+.dashboardMain > #itemsPanel > table > tbody > tr:not(:last-child) > td:not(:last-child):hover::before {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: var(--color-primary);
+	opacity: 0.25;
+	z-index: -1;
+}
+.dashboardMain > #itemsPanel > table > tbody > tr > td > #addItemButton {
+	min-width: 100%;
+}

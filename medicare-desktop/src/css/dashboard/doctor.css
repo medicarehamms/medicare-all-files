@@ -1,0 +1,94 @@
+
+.dashboardMain#doctor {
+	padding: 4rem !important;
+
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+}
+
+.dashboardMain > #doctorPanel {
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+	border-radius: 1rem;
+
+	padding: 4rem;
+
+	justify-content: stretch;
+	align-items: flex-start;
+	flex-direction: row;
+	gap: 8rem 4rem;
+	flex-wrap: wrap;
+
+	background-color: var(--color-font-light);
+
+	z-index: 1;
+	overflow-y: auto;
+}
+.dashboardMain > #doctorPanel > div {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 2rem;
+}
+.dashboardMain > #doctorPanel > div:first-child {
+	width: 20rem;
+}
+.dashboardMain > #doctorPanel > div:first-child > #avatar {
+	position: relative;
+	width: 20rem;
+	height: 20rem;
+
+	object-fit: cover;
+	border-radius: 1rem;
+}
+.dashboardMain > #doctorPanel > div:first-child > input {
+	display: none;
+}
+.dashboardMain > #doctorPanel > div:first-child > .button {
+	width: 20rem;
+}
+.dashboardMain > #doctorPanel > div:nth-child(2) {
+	min-height: 28rem;
+	width: calc(100% - 20rem - 4rem);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-rows: auto;
+	grid-gap: 2rem;
+	align-items: space-between;
+	justify-content: flex-start;
+}
+.dashboardMain > #doctorPanel > div:nth-child(2) > :first-child {
+	grid-column: span 2;
+}
+.dashboardMain > #doctorPanel > div:nth-child(2) > span {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+	gap: 1rem;
+}
+.dashboardMain > #doctorPanel > div:nth-child(2) > span > span {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+}
+.dashboardMain > #doctorPanel > div:nth-child(2) > span > span > * {
+	width: 100%;
+}
+.dashboardMain > #doctorPanel > div:nth-child(2) > div:last-of-type {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+}
+.dashboardMain > #doctorPanel > div:nth-child(2) > div:last-of-type > .button {
+	width: 100%;
+}

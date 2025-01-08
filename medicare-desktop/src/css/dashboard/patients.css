@@ -1,0 +1,63 @@
+
+.dashboardMain#patients {
+	padding: 4rem !important;
+
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+}
+
+.dashboardMain > #patientsPanel {
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+	border-radius: 1rem;
+
+	padding: 4rem;
+
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 4rem;
+
+	background-color: var(--color-font-light);
+
+	z-index: 1;
+	overflow-y: auto;
+}
+.dashboardMain > #patientsPanel > table {
+	width: 100%;
+
+	border-collapse: collapse;
+	border-radius: 1rem;
+	border: solid 0.25rem var(--color-font-dark);
+
+	background-color: var(--color-font-light);
+
+	white-space: nowrap;
+
+	overflow: hidden;
+}
+.dashboardMain > #patientsPanel > table > thead > tr:nth-child(1) {
+	background-color: var(--color-primary);
+	color: var(--color-font-light);
+}
+.dashboardMain > #patientsPanel > table > * > tr > *:nth-child(2) {
+	width: 100%;
+}
+.dashboardMain > #patientsPanel > table > * > tr > * {
+	padding: 2rem;
+	border: solid 0.25rem var(--color-font-dark);
+}
+.dashboardMain > #patientsPanel > table > * > tr > *:last-child > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+}
+.dashboardMain > #patientsPanel > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+}
